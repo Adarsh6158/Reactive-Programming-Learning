@@ -2,52 +2,15 @@
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        HTTP Request/Response                    │
-├─────────────────────────────────────────────────────────────────┤
-│  Controller Layer (ProductController, OperatorsController)      │
-│  - Handles HTTP requests                                        │
-│  - Returns appropriate HTTP responses                           │
-├─────────────────────────────────────────────────────────────────┤
-│  Handler Layer (ProductHandler)                                 │
-│  - Functional routing alternative to controllers                │
-│  - Serverside utilities for request/response processing         │
-├─────────────────────────────────────────────────────────────────┤
-│  Service Layer (ProductService)                                 │
-│  - Business logic                                               │
-│  - Validation                                                   │
-│  - Error handling                                               │
-├─────────────────────────────────────────────────────────────────┤
-│  Repository Layer (ProductRepository)                           │
-│  - Data access operations                                       │
-│  - ReactiveMongoRepository interface                            │
-├─────────────────────────────────────────────────────────────────┤
-│            MongoDB (Non-blocking Driver)                        │
-└─────────────────────────────────────────────────────────────────┘
-```
+
+<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/85d07a23-2af4-4862-863c-c9f018b58f89" />
+
+
 
 ### Reactive Request Processing Flow
 
-```
-HTTP Request
-    ↓
-@RestController / Handler
-    ↓
-Controller Method (returns Mono/Flux)
-    ↓
-Service Layer (business logic)
-    ↓
-Repository (database query)
-    ↓
-MongoDB (non-blocking driver)
-    ↓
-Result emitted through reactive stream
-    ↓
-Spring WebFlux converts to HTTP Response
-    ↓
-HTTP Response sent to client
-```
+<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/23eb63bb-7819-403a-bc8a-c2bd193d2d3c" />
+
 
 ## 🛠️ Technologies
 
@@ -173,7 +136,7 @@ curl http://localhost:8081/api/v1/demo/map
 curl http://localhost:8081/api/v1/demo/filter
 ```
 
-## ✅ Features
+## Features
 
 - ✓ **Fully Reactive** - Non-blocking operations with Project Reactor
 - ✓ **Production-Ready** - Global exception handling, proper HTTP status codes
@@ -184,7 +147,7 @@ curl http://localhost:8081/api/v1/demo/filter
 - ✓ **MongoDB Integration** - Reactive database driver
 - ✓ **CORS Enabled** - Cross-origin requests supported
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 # Run all tests
@@ -196,15 +159,6 @@ curl http://localhost:8081/api/v1/demo/filter
 # Generate test coverage
 ./mvnw test jacoco:report
 ```
-
-All tests pass: **65/65 ✅**
-
-## 📖 Learn More
-
-- [Spring WebFlux Documentation](https://docs.spring.io/spring-framework/reference/web-reactive.html)
-- [Project Reactor Guide](https://projectreactor.io/docs/core/release/reference/)
-- [Spring Data MongoDB Reactive](https://docs.spring.io/spring-data/mongodb/reference/mongodb/reactive-repositories.html)
-- [OpenAPI 3.0 Specification](https://spec.openapis.org/oas/v3.0.0)
 
 ### Installation
 
