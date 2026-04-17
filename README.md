@@ -2,14 +2,12 @@
 
 ## 🏗️ Architecture
 
-
-<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/85d07a23-2af4-4862-863c-c9f018b58f89" />
-
+<img width="602" height="710" alt="image" src="https://github.com/user-attachments/assets/4f8684dd-6a7f-4db2-be7c-0d8a89cb7628" />
 
 
 ### Reactive Request Processing Flow
 
-<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/23eb63bb-7819-403a-bc8a-c2bd193d2d3c" />
+<img width="700" height="270" alt="image" src="https://github.com/user-attachments/assets/bb62b1b8-a482-4155-a7c5-dae07690db39" />
 
 
 ## 🛠️ Technologies
@@ -53,7 +51,7 @@ src/main/resources/
 └── application.properties               # Application configuration
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
